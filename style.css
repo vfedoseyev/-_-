@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+  transition: all ease 0.3s;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  color: rgb(97, 95, 92);
+  font-weight: 500;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 2px;
+}
+
+th,
+td {
+  border: none;
+  text-align: center;
+  padding: 12px;
+  cursor: pointer;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+/* Применяем серый фон ко всем ячейкам первого столбца */
+table td:first-child {
+  background-color: #f2f2f2;
+  text-align: left;
+}
+/* Применяем голубой фон ко всем ячейкам второго столбца */
+table td:nth-child(2),
+table th:nth-child(2) {
+  background-color: #e0f7fa;
+}
+/* Применяем  к третьему столбцу */
+table td:nth-child(3),
+table th:nth-child(3) {
+  display: flex;
+  justify-content: space-around;
+}
+
+table td:nth-child(4),
+table th:nth-child(4) {
+  background-color: #f2f2f2;
+}
+
+/* Для положительных изменений */
+td.positive {
+  background-color: rgba(154, 240, 128, 0.746);
+  color: green;
+}
+
+/* Для отрицательных изменений */
+td.negative {
+  background-color: rgba(238, 144, 144, 0.771);
+  color: red;
+}
+
+@media (max-width: 768px) {
+  th,
+  td {
+    font-size: 14px;
+  }
+  table td:nth-child(3),
+  table th:nth-child(3) {
+    display: table-cell;
+  }
+}
+
+/* Стили для контейнера графика */
+
+.chart-container {
+  width: 100%;
+  height: auto; /* Высота будет автоматически адаптироваться */
+}
+
+/* Высота графика для мобильных устройств */
+@media (max-width: 768px) {
+  .chart-container {
+    height: 300px; /* Уменьшите высоту графика для мобильных устройств */
+    width: 90vw;
+  }
+}
+@media (max-width: 468px) {
+  .chart-container {
+    height: 300px; /* Уменьшите высоту графика для мобильных устройств */
+    width: 95vw;
+  }
+}
